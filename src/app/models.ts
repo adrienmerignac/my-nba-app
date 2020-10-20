@@ -5,6 +5,15 @@ export interface Post {
     body: string;
 }
 
+export interface Comments {
+    postId: number;
+    id: number;
+    name: string;
+    email: string;
+    body: string;
+}
+
 export interface Standard {
     post: Post[];
+    comments: Comments[];
 }
