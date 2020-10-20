@@ -1,7 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { CommentsComponent } from './comments/comments.component';
+import { PostsComponent } from './posts/posts.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: '',
+    component: PostsComponent
+  },
+  {
+    path: 'posts/:postId/comments',
+    component: CommentsComponent
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
