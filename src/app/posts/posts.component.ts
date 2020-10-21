@@ -15,7 +15,7 @@ import { PostService } from './../post.service';
 })
 export class PostsComponent implements OnInit {
 
-  allPost: any;
+  allPost: Post[];
 
   constructor(private route: ActivatedRoute, private postService: PostService, private router: Router) {
 
@@ -24,8 +24,7 @@ export class PostsComponent implements OnInit {
 
       this.postService.getAllPosts().subscribe(data => {
         console.log('posts', data);
-        const post = data;
-        this.allPost = post;
+        this.allPost = data;
       });
     });
    }

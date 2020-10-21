@@ -5,7 +5,7 @@ export interface Post {
     body: string;
 }
 
-export interface Comments {
+export interface Comment {
     postId: number;
     id: number;
     name: string;
@@ -15,5 +15,5 @@ export interface Comments {
 
 export interface Standard {
     post: Post[];
-    comments: Comments[];
+    comments: Comment[];
 }
