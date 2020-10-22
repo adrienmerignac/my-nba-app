@@ -9,7 +9,7 @@ import { MaterialModule } from './shared/material.module';
 
 import { AppComponent } from './app.component';
 import { PostsComponent } from './posts/posts.component';
-import { CommentsComponent } from './comments/comments.component';
+import { PostDetailsComponent } from './postdetails/postdetails.component';
 
 import { PostService } from './post.service';
 
@@ -18,7 +18,7 @@ import { PostService } from './post.service';
   declarations: [
     AppComponent,
     PostsComponent,
-    CommentsComponent
+    PostDetailsComponent
   ],
   imports: [
     BrowserModule,
