@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-
-import { Standard, Post } from '../models';
-
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 
+import { Post } from '../models';
 import { PostService } from './../post.service';
 
 
@@ -15,7 +13,7 @@ import { PostService } from './../post.service';
 })
 export class PostsComponent implements OnInit {
 
-  allPost: any;
+  Posts: Post[];
 
   constructor(private route: ActivatedRoute, private postService: PostService, private router: Router) {
 
@@ -23,9 +21,8 @@ export class PostsComponent implements OnInit {
       console.log(res);
 
       this.postService.getAllPosts().subscribe(data => {
-        console.log('posts', data);
-        const post = data;
-        this.allPost = post;
+        console.log('Posts', data);
+        this.Posts = data;
       });
     });
    }

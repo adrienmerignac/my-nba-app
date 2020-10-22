@@ -5,7 +5,14 @@ export interface Post {
     body: string;
 }
 
-export interface Comments {
+export interface PostDetail {
+    userId: number;
+    id: number;
+    title: string;
+    body: string;
+}
+
+export interface Comment {
     postId: number;
     id: number;
     name: string;
@@ -15,5 +22,6 @@ export interface Comments {
 
 export interface Standard {
     post: Post[];
-    comments: Comments[];
+    postdetail: PostDetail;
+    comment: Comment[];
 }

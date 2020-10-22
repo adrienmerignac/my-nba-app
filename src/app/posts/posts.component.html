@@ -1,29 +1,19 @@
-<div class="pageTitle">
-    <h2>
-        Liste des POSTS
-    </h2>
-</div>
-
-<div class="card-layout" fxLayout='row wrap'>
-    <div fxFlex="25%" *ngFor="let post of allPost">
-        <mat-card class="mat-elevation-z4">
-            <mat-card-header>
-                <div mat-card-avatar class="example-header-image"></div>
-                <mat-card-title>{{ post.title }}</mat-card-title>
-            </mat-card-header>
-            <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-
-            <mat-card-content routerLink = "posts/{{ post.id }}/comments">
-                <span>
-                    <p>
-                        {{ post.body }}
-                    </p>
-                </span>
-            </mat-card-content>
-            <mat-card-actions>
-                <button mat-button>LIKE</button>
-                <button mat-button>SHARE</button>
-                </mat-card-actions>
-        </mat-card>
-    </div>
+<div class="main-div" fxLayout='column' *ngFor="let post of Posts">
+    <mat-card class="mat-elevation-z4 center">
+        <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>{{ post.title }}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+            <span>
+                <p>
+                    {{ post.body }}
+                </p>
+            </span>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button routerLink="posts/{{ post.id }}">More Details</button>
+        </mat-card-actions>
+    </mat-card>
 </div>

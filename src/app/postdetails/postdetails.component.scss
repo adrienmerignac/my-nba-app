@@ -1,0 +1,34 @@
+.main-div{
+    display: flex;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.mat-card {
+    margin: 20px;
+}
+
+.mat-card-header-text {
+    margin: 0 !important;
+}
+.example-action-buttons {
+    padding-bottom: 20px;
+}
+
+.example-headers-align .mat-expansion-panel-header-title,
+.example-headers-align .mat-expansion-panel-header-description {
+    flex-basis: 0;
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.example-headers-align .mat-form-field + .mat-form-field {
+    margin-left: 8px;
+}
+
+.mat-expansion-panel:not([class*=mat-elevation-z]) {
+    box-shadow: none;
+}
