@@ -1,0 +1,18 @@
+<form [formGroup]="myForm" (ngSubmit)="addPost()" novalidate>
+
+    <!-- Name -->
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Title" formControlName="title">
+    </mat-form-field>
+    <br />
+    <!-- Email -->
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Body" formControlName="body">
+    </mat-form-field>
+
+    <!-- Submit -->
+    <div class="button-wrapper">
+        <button mat-flat-button type="submit" [disabled]="!myForm.valid" color="primary">Submit</button>
+    </div>
+
+</form>

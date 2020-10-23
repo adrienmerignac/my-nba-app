@@ -12,13 +12,17 @@ import { PostsComponent } from './posts/posts.component';
 import { PostDetailsComponent } from './postdetails/postdetails.component';
 
 import { PostService } from './post.service';
+import { AddpostComponent } from './addpost/addpost.component';
+import { PostFormComponent } from './post-form/post-form.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     PostsComponent,
-    PostDetailsComponent
+    PostDetailsComponent,
+    AddpostComponent,
+    PostFormComponent
   ],
   imports: [
     BrowserModule,
